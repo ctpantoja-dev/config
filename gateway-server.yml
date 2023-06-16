@@ -1,6 +1,15 @@
 server:
   port: 8072
 
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, gateway
+
 eureka:
   instance:
     preferIpAddress: true
